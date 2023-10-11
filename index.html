@@ -1,0 +1,516 @@
+<html>
+    <head><title>home</title>
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, charset=UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+            height: 100vh;
+            width: 100%; 
+        }
+         *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    nav{
+        font-size: 25px;
+    }
+        .container{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+       }
+       
+        .container-1{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            justify-content: center;
+            align-items: center;
+
+        }
+        .r{
+            background: url("w3.png") no-repeat center;
+            background-size: cover;
+            height:80vh;
+            width: 100vh;
+            justify-self:center;
+        }
+.l{
+    text-align: center;
+}
+section{
+    background-color: rgb(8, 182, 202);
+    padding: 40px;
+    box-shadow: 0 0 10px black;
+}
+ul{
+    list-style-type: none;
+    text-align:center;
+    
+}
+li{
+    text-align:center;
+    display: inline;
+    text-decoration:none;
+    
+}
+    
+li a{
+    text-decoration:none;
+    padding:14px 16px;
+    color:white;
+    
+}
+li:hover{
+    background-color: rgb(4, 32, 87);
+    border-radius: 20px;
+}
+
+
+   .menu-icon{
+    display:none;
+    cursor: pointer;
+   
+  
+   }
+   #loginButton{
+    width: 150px;
+    height: 80px;
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px black;
+    font-size: 30px;
+    background-image:linear-gradient(to bottom,#33ccff 0%,#ff99cc 100%);
+   }
+   h2{
+    background:linear-gradient(to bottom,#33ccff 0%,#ff99cc 100%);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+   }
+   h2{
+    font-size: 50px;
+    font-family:sans-serif;
+
+   }
+    p{
+        font-size: small;
+        font-family:cursive;
+        font-weight: bold;
+    }
+    table{
+        background-color:rgba(224, 224, 24, 0.866);
+        color:white;
+        margin-left: 70px;
+        
+    }
+    td{
+        font-weight: bolder;
+        font-size: 30px;
+    } 
+     h1 {
+            text-align: center;
+        }
+
+
+#loginn {
+    z-index: 2; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: none; 
+    background: white; 
+    padding: 20px;
+    box-shadow: 0 0 10px black; 
+    
+
+}
+
+        .login-form {
+            width: 400px;
+            margin: 0 auto;
+            font-size: 25px;
+            
+        }
+        
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            border:none;
+        }
+        .form-group input:hover{
+        background-color: #ccc;
+       }
+
+        .form-group input:focus{
+           border: 2px solid black;
+           background-color:white;
+           }
+       
+
+        .social-icons {
+            text-align: center;
+           
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 30px;
+        }
+        #overlay {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: none; }
+
+    @media screen and (max-width: 880px){
+    .container-1 {
+                display: flex;
+                flex-direction: column-reverse;
+                margin-top: 150px; 
+            }
+            
+           
+            .r{
+                height: 300px; 
+              width: 100%;   
+             background: url("w3.png") no-repeat center;
+              background-size: cover;
+                 text-align: center;}
+       
+.menu-list{
+    display: none;
+}
+
+.menu-icon{
+    display: block;
+    font-size: 30px;
+    position:absolute;
+   top:20px;
+   right: 10px;
+   
+   
+    
+}
+.l {
+
+    text-align: center;
+  }
+nav{
+    display: flex;
+flex-direction: column;
+}
+nav li{
+    display: block;
+    padding: 10px 0;
+
+}
+
+ul{
+    text-align: center;
+}
+table{
+    margin-left: 50px;
+}
+
+
+ }
+ @media screen and (max-width: 480px) {
+
+.container-1 {
+margin-top: 100px;
+}
+
+.r {
+margin-top: 100px;
+height: 200px;
+}
+
+
+h2 {
+font-size: 30px;
+}
+
+
+.button {
+font-size: 15px;
+padding: 10px 20px; 
+}
+
+table {
+margin-left: 15px;
+margin-right: 15px;
+}
+
+td {
+font-size: 15px;
+}
+
+
+
+section {
+
+box-shadow: 0 0 10px black;
+}
+
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 30px;
+  color:black;
+  line-height: 15px;
+ 
+ 
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  background-image:linear-gradient(to bottom,#33ccff 0%,#ff99cc 100%);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+
+.dropbtn {
+            padding: 14px 16px;
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .dropbtn:hover {
+            background-color: rgb(4, 32, 87);
+            border-radius: 20px;
+        }
+
+       
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+       
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+      
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+            text-align: center;
+        }
+
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+       
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .dropdown.active .dropbtn .fa-caret-down {
+            transform: rotate(180deg);
+        }
+
+
+    </style></head>
+    <body>
+        <section>
+            <div class="waviy">
+                <span style="--i:1">M</span>
+                <span style="--i:2">a</span>
+                <span style="--i:3">j</span>
+                <span style="--i:4">o</span>
+                <span style="--i:5">r</span>
+                <span style="--i:6">M</span>
+                <span style="--i:7">e</span>
+                <span style="--i:8">n</span>
+                <span style="--i:9">t</span>
+                <span style="--i:10">o</span>
+                <span style="--i:11">r</span>
+             
+               </div>
+           <nav style="padding-left: 150px;">
+             <ul align="right" class="menu-list">
+            <li><a href="index.html"> Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="fields.html">Fields</a></li>
+            <li><a href="quizz.html">Quizz</a></li>
+            <li><a href="college.html">Colleges</a></li>
+            <li><a href="scholarship.html">Scholarship</a></li>
+            <li> <div class="dropdown">
+                <a class="dropbtn" id="dropdownBtn">
+                    Mentor Hub <i class="fas fa-caret-down"></i>
+                </a>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="mentor.html">Mentor search</a>
+                    <a href="chat.html">Mentor talk</a>
+                    <a href="video.html">Prep clips</a>
+                </div>
+            </div></li>
+            <li><a href="form.html">Enroll</a></li>
+            </ul> 
+            <div class="menu-icon">
+               <i class="fa fa-bars"></i>
+                
+            </div></nav>
+            </section>
+<div class="container">
+    <div class="container-1">
+    <div class="l">
+        <h2>Uncover the secret <br>of Successful life!</h2>
+        <p style="font-size: 20px;">learn & grow with help from the world class mentors.<br>boost your skill with quality and professional courses.</p>
+       <br><br> <p><table cellspacing="20px">
+            <tr>
+                <td>2k+ <br>course videos</td>
+                <td> 300+ <br>expert mentors</td>
+                <td> 30k+<br>learners
+                </td>
+
+            </tr>
+        </table></p>
+        <br><button type="button"class="button" id="loginButton">Login</button></div>
+    <div class="r"></div>
+    </div></div>
+    <div id="overlay"></div>
+    
+    <div id="loginn">
+        
+        <h1>Login</h1>
+        <div class="login-form">
+            
+            <form action="login.php" method="POST">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="remember_me" class="remember-me">Remember Me</label>
+                    <input type="checkbox" id="remember_me" name="remember_me" class="remember-me">
+                </div>
+    
+                <div class="form-group">
+                    <input type="submit" value="Sumbit" style="padding: 10px;color: white;background-color: #007BFF;outline: none;">
+                </div>
+            </form>
+            <button id="closeButton" style="padding: 10px;color: white;background-color: #007BFF;outline: none;border: none;">Close</button>
+        </div>
+    
+        <div class="social-icons">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div></div>
+   <script>
+        const menu=document.querySelector('.menu-icon');
+        const menulist=document.querySelector('nav ul');
+        menu.addEventListener('click',()=>{
+        menulist.classList.toggle('menu-list')});
+
+
+    
+        var loginButton = document.getElementById("loginButton");
+        var modal = document.getElementById("loginn");
+        var overlay = document.getElementById("overlay");
+
+loginButton.addEventListener('click', function () {
+    
+    modal.style.display = "block";
+    overlay.style.display = "block"; 
+});
+
+
+var closeBtn = document.getElementById("closeButton");
+
+closeBtn.addEventListener('click', function () {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+});
+
+window.addEventListener('click', function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+    }
+});
+document.getElementById("dropdownBtn").addEventListener("click", function() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            var dropdown = document.querySelector(".dropdown");
+            
+            dropdownContent.classList.toggle("active");
+            dropdown.classList.toggle("active");
+        });
+</script>
+  
+
+
+    </body>
+</html>

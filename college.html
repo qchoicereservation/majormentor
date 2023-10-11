@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>college</title>
+    <style>
+       
+        
+    
+         *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+        section{
+            background-color:white;
+    padding: 40px;
+    box-shadow: 0 0 10px black;
+    margin-bottom: 10px;
+}
+ul{
+    list-style-type: none;
+    text-align:center;
+    
+}
+li{
+    text-align:center;
+    display: inline;
+    text-decoration:none;
+    
+}
+nav{
+        font-size: 25px;
+    }
+    
+li a{
+    text-decoration:none;
+    padding:14px 16px;
+    color:black;
+    
+}
+li:hover{
+    background-color: rgb(4, 32, 87);
+    border-radius: 20px;
+}
+ li a:hover{
+  color:white
+
+}
+
+
+   .menu-icon{
+    display:none;
+    cursor: pointer;
+   
+  
+   }
+   @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 30px;
+  color:black;
+  line-height: 15px;
+ float: left;
+ 
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  background-image:linear-gradient(to bottom,#33ccff 0%,#ff99cc 100%);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+.dropbtn {
+            padding: 14px 16px;
+            color:black;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .dropbtn:hover {
+            background-color: rgb(4, 32, 87);
+            border-radius: 20px;
+        }
+
+       
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+       
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+      
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+            text-align: center;
+        }
+
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+       
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .dropdown.active .dropbtn .fa-caret-down {
+            transform: rotate(180deg);
+        }
+      *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .colleges{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        background-image: url("course.jpeg");
+        width:100%;
+        background-size: cover; 
+  background-repeat: no-repeat;
+        padding: 200px;
+        
+      }
+      select{
+        height: 50px;
+        width:300px;
+        text-align: center;
+        font-size: medium;
+      }
+      button{
+        height: 50px;
+        width:300px;
+        text-align: center;
+        font-size: medium;
+        color: #fff;
+        background-color: #6ac0d1;
+      }
+       
+      table {
+        align-self:center;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 100px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        th:first-child, td:first-child {
+            text-align: center;
+        }
+
+        td img {
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+.details {
+  height: 100vh;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  row-gap: 90px;
+  font-family: Arial, sans-serif;
+  margin-top: 100px;
+ 
+}
+
+
+.card {
+  
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  padding: 30px 50px;
+  background:linear-gradient(to bottom,#e2fafa 0%,#ced0e0 100%);
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.card:hover {
+  height: 350px;
+}
+
+.imgbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-80px);
+  z-index: 99;
+ 
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+
+  text-align: center;
+  transform: translateY(-450px);
+  opacity: 0;
+  transition: 0.3s;
+  padding-bottom: 80px;
+  
+}
+
+.card:hover > .content {
+  opacity: 1;
+  transform: translateY(-180px);
+
+}
+.card:hover > .imgbox h1 {
+display: none;
+}
+.h{
+  grid-column: span 3;
+  margin-top: 30px;
+}
+
+.content h2 {
+  color: #7f9ead;
+}
+.grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px; 
+        }
+
+        .grid-cell {
+            padding: 10px;
+            text-align: center;
+            background-color: #f2f2f2; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-container {
+            width: 100%;
+            max-height: 200px; 
+            overflow: hidden;
+        }
+
+        .image {
+            width: 100%;
+            height:100%;
+            object-fit: contain; 
+        }
+
+        .vs-text {
+            font-size: 24px;
+            margin: 10px 0; 
+            background-color: rgb(74, 71, 71);
+            border-radius: 50%;
+            color: white;
+            box-shadow: 0 5px 10px rgb(105, 102, 102);
+        }
+
+        .description-text {
+            margin-top: 10px; 
+            font-family: fantasy;
+        }
+        button{
+            color: white;
+            font-weight: bold;
+            background-color:orange;
+            padding: 10px;
+            font-size: 15px;
+            outline: none;
+            border: none;
+        }
+@media (max-width: 768px) {
+            .details {
+                width: 100%;
+                display: grid;
+            grid-template-columns: repeat(1,1fr);
+            row-gap: 90px;
+               align-self: center;
+               justify-self: center;
+               margin-left: 20px;
+            }
+            .colleges{
+              grid-template-columns: repeat(1,1fr);
+              row-gap: 10px;
+              background-size:100% 100%;
+              background-repeat: no-repeat;
+             justify-content: center;
+             align-self: center;
+              
+            }
+            .grid-container{
+              grid-template-columns: repeat(1,1fr);
+            }
+            .h{
+            grid-column: span 1;
+           margin-top: 20px;}
+          
+           .menu-list{
+    display: none;
+}
+
+.menu-icon{
+    display: block;
+    font-size: 30px;
+    position:absolute;
+   top:20px;
+   right: 10px;
+   
+   
+    
+}
+nav{
+    display: flex;
+flex-direction: column;
+}
+nav li{
+    display: block;
+    padding: 10px 0;
+
+}
+
+ul{
+    text-align: center;
+}
+           
+        }
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="waviy">
+          <span style="--i:1">M</span>
+          <span style="--i:2">a</span>
+          <span style="--i:3">j</span>
+          <span style="--i:4">o</span>
+          <span style="--i:5">r</span>
+          <span style="--i:6">M</span>
+          <span style="--i:7">e</span>
+          <span style="--i:8">n</span>
+          <span style="--i:9">t</span>
+          <span style="--i:10">o</span>
+          <span style="--i:11">r</span>
+       
+         </div>
+     <nav style="padding-left: 150px;">
+       <ul align="right" class="menu-list">
+      <li><a href="index.html"> Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="fields.html">Fields</a></li>
+      <li><a href="quizz.html">Quizz</a></li>
+      <li><a href="college.html">Colleges</a></li>
+      <li><a href="scholarship.html">Scholarship</a></li>
+      <li> <div class="dropdown">
+          <a class="dropbtn" id="dropdownBtn">
+              Mentor Hub <i class="fas fa-caret-down"></i>
+          </a>
+          <div class="dropdown-content" id="dropdownContent">
+              <a href="mentor.html">Mentor search</a>
+              <a href="chat.html">Mentor talk</a>
+              <a href="video.html">Prep clips</a>
+          </div>
+      </div></li>
+      <li><a href="form.html">Enroll</a></li>
+      </ul> 
+      <div class="menu-icon">
+         <i class="fa fa-bars"></i>
+          
+      </div></nav>
+      </section>
+   
+  <div class="colleges">
+    
+    <div class="select"><select name="courses" placeholder="Course Name">
+      <option><h1 style="background-color: #7f9ead;color: white;">Course name</h1></option>
+      <option value="B.E">B.Tech/B.E</option>
+      <option value="Bsc">Bsc</option>
+      <option value="bba">BBA/BBM/BBS</option>
+      <option value="com">BCom</option>
+      <option value="mbbs">MBBS</option>
+      <option value="B.arch">B.Arch</option>
+      <option value="pharm">B.Pharm</option>
+      <option value="Fashion">Fashion Design-UG</option>
+      <option value="Nursing">Nursing</option>
+    </select></div>
+    <div class="multiple"> <select name="Location" placeholder="Location">
+      <option ><h1 style="background-color: #7f9ead;color: white;">Location</h1></option>
+      <option value="Tamilnadu">Tamilnadu</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Gurgaon">Gurgaon</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Pune">Pune</option>
+      <option value="Kolkata">Kolkata</option>
+      <option value="Ahmedabad">Ahmedabad</option>
+    </select></div>
+    <div class="b"><button type="submit">Find Colleges</button></div>
+  <div class="h"> <h1 style="color: #6ac0d1;font-size: 40px;text-align: center;text-shadow: 0 0 10px black;">Best college To Study along with Personal development </h1></div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <h1>College Compare</h1> 
+  <div class="grid-container">
+    <div class="grid-cell">
+        <div class="image-container">
+            <img class="image" src="l1.jpeg" alt="Left Image">
+        </div>
+        <p class="vs-text">vs</p>
+        <div class="image-container">
+            <img class="image" src="l2.webp" alt="Right Image">
+        </div>
+        <p class="description-text">Harvard University vs Stanford University</p>
+        <button type="sumbit">Compare</button>
+    </div>
+    <div class="grid-cell">
+        <div class="image-container">
+            <img class="image" src="l8.jpg" alt="Left Image">
+        </div>
+        <p class="vs-text">vs</p>
+        <div class="image-container">
+            <img class="image" src="l5.jpg" alt="Right Image">
+        </div>
+        <p class="description-text">Massachusetts Institute of Technology vs California Institute of Technology</p>
+        <button type="sumbit">Compare</button>
+    </div>
+    <div class="grid-cell">
+        <div class="image-container">
+            <img class="image" src="l6.jpeg" alt="Left Image">
+        </div>
+        <p class="vs-text">vs</p>
+        <div class="image-container">
+            <img class="image" src="l7.jpg" alt="Right Image">
+        </div>
+        <p class="description-text">Yale University vs Princeton University</p>
+        <button type="sumbit">Compare</button>
+    </div>
+    <div class="grid-cell">
+        <div class="image-container">
+            <img class="image" src="l4.jpg" alt="Left Image">
+        </div>
+        <p class="vs-text">vs</p>
+        <div class="image-container">
+            <img class="image" src="l8.jpg" alt="Right Image">
+        </div>
+        <p class="description-text">University of Oxford vs University of Cambridge</p>
+        <button type="sumbit">Compare</button>
+    </div>
+    
+    
+</div>
+<br>
+<br>
+<h1>Top 10 Colleges</h1>
+  <table>
+    <tr>
+        <th>Rank</th>
+        <th>College</th>
+        <th>Ranking</th>
+        <th>Cutoff</th>
+        <th>Application Deadline</th>
+        <th>Fees</th>
+    </tr>
+    <tr>
+        <td>#1</td>
+        <td><img src="l2.webp" alt="College Logo"> IIT Madras - Indian Institute of Technology - [IITM]</td>
+        <td>Chennai, Tamil Nadu | 10/10</td>
+        <td>#15 out of 50 in India 2019</td>
+        <td>JEE-Advanced 2023 Cut off 144</td>
+        <td>15 Jan - 21 Aug 2023 | ₹2,09,550 1st Year Fees</td>
+    </tr>
+    <tr style="background-color:#f2f2f2 ;">
+        <td>#2</td>
+        <td><img src="l7.jpg" alt="College Logo"> IIT Kharagpur - Indian Institute of Technology - [IITKGP]</td>
+        <td>Kharagpur, West Bengal | 9.9/10</td>
+        <td>#6 out of 50 in India 2019</td>
+        <td>JEE-Advanced 2023 Cut off 261</td>
+        <td>20 May - 21 Aug 2023 | ₹2,23,600 1st Year Fees</td>
+    </tr>
+    <tr>
+        <td>#3</td>
+        <td><img src="l4.jpg" alt="College Logo"> Indian Institute of Management - [IIMA]</td>
+        <td>Ahmedabad, Gujarat | 9.9/10</td>
+        <td>#2 out of 50 in India 2019</td>
+        <td>CAT 2022 Cut off 99</td>
+        <td>- | ₹12,00,000 Total Fees</td>
+    </tr>
+    <tr style="background-color:#f2f2f2 ;">
+        <td>#4</td>
+        <td><img src="l1.jpeg" alt="College Logo"> IIM Bangalore - Indian Institute of Management</td>
+        <td>Bangalore, Karnataka | 9.9/10</td>
+        <td>#1 out of 50 in India 2019</td>
+        <td>CAT 2022 Cut off 99</td>
+        <td>4 Feb - 12 Feb 2023 | ₹28,50,000 Total Fees</td>
+    </tr>
+    <tr>
+        <td>#5</td>
+        <td><img src="l8.jpg" alt="College Logo"> Indian Institute of Management - [IIMC]</td>
+        <td>Kolkata, West Bengal | 9.9/10</td>
+        <td>#3 out of 50 in India 2019</td>
+        <td>CAT 2022 Cut off 99</td>
+        <td>- | ₹31,00,000 Total Fees</td>
+    </tr>
+    <tr style="background-color:#f2f2f2 ;">
+        <td>#6</td>
+        <td><img src="l7.jpg" alt="College Logo"> IIT Delhi - Indian Institute of Technology [IITD]</td>
+        <td>New Delhi, Delhi NCR | 9.9/10</td>
+        <td>#9 out of 50 in India 2019</td>
+        <td>JEE-Advanced 2023 Cut off 115</td>
+        <td>4 Feb - 12 Feb 2023 | ₹2,54,650 1st Year Fees</td>
+    </tr>
+    <tr>
+        <td>#7</td>
+        <td><img src="l6.jpeg" alt="College Logo"> XLRI - Xavier Labour Relations Institute</td>
+        <td>Jamshedpur, Jharkhand | 9.9/10</td>
+        <td>#7 out of 50 in India 2019</td>
+        <td>XAT 2022 Cut off 92</td>
+        <td>-</td>
+    </tr>
+    <tr style="background-color:#f2f2f2 ;">
+        <td>#8</td>
+        <td><img src="l4.jpg" alt="College Logo"> IIT Bombay - Indian Institute of Technology - [IITB]</td>
+        <td>Mumbai, Maharashtra | 9.9/10</td>
+        <td>#10 out of 50 in India 2019</td>
+        <td>JEE-Advanced 2023 Cut off 66</td>
+        <td>3 Jan - 04 Jan 2024 | ₹59,300 1st Year Fees</td>
+    </tr>
+    <tr>
+        <td>#9</td>
+        <td><img src="l2.webp" alt="College Logo">FMS Delhi Faculty of Management Studies</td>
+        <td>New Delhi, Delhi NCR | 9.9/10</td>
+        <td>#35 out of 50 in India 2019</td>
+        <td>CAT 2022 Cut off 98</td>
+        <td>29 Jan - 21 Apr 2023 | ₹1,00,000 1st Year Fees</td>
+    </tr>
+    <tr style="background-color:#f2f2f2;">
+        <td>#10</td>
+        <td><img src="l1.jpeg" alt="College Logo"> SP Jain [SPJIMR]</td>
+        <td>Mumbai, Maharashtra | 9.9/10</td>
+        <td>#16 out of 50 in India 2019</td>
+        <td>CAT 2022 Cut off 85</td>
+        <td>23 Jan - 07 Mar 2023 | ₹23,50,000 Total Fees</td>
+    </tr></table>
+    <br>
+    <br>
+    <br>
+    <h1>College Review</h1>
+    <section class="details">
+    <div class="card">
+      <div class="imgbox">
+        <img
+          src="l4.jpg"
+        />
+        <h1 style="text-align: center;color: #3d484a;">XLRI - Xavier Labour Relations Institute</h1>
+      </div>
+      
+
+      <div class="content">
+        <h2>XLRI - Xavier Labour Relations Institute</h2>
+        <p>
+          <ul>
+            <li>College Name:XLRI - Xavier Labour Relations Institute</li>
+            <li>Location:Jamshedpur, Jharkhand</li>
+            <li>Ranking: #7 out of 50 in India 2019</li>
+            <li>Cutoff:XAT 2022 Cut off 92</li>
+            <li>Fees: Information not available</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img
+          src="l8.jpg"
+        />
+        <h1 style="text-align: center;color: #3d484a;">IT Kharagpur - [IITKGP]</h1>
+      </div>
+      
+
+      <div class="content">
+        <h2>IT Kharagpur - [IITKGP]</h2>
+        <p>
+          <ul>
+          <li>Location: Kharagpur, West Bengal</li>
+                <li>Notable for: Prestigious Technical Institute</li>
+                <li>Admission Cut-off: JEE-Advanced 2023 - 261</li>
+                <li>Application Deadline: 20 May - 21 Aug 2023</li>
+                <li>1st Year Fees: ₹2,23,600</li>
+            </ul>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img
+          src="l4.jpg"
+        />
+        <h1 style="text-align: center;color: #3d484a;">IIT(Madras)</h1>
+      </div>
+
+      <div class="content">
+        <h2>IIT(Madras)</h2>
+        <p>
+          <ul>
+            <li>Location: Chennai, Tamil Nadu</li>
+            <li>Notable for: Top Choice for Tech Aspirants</li>
+            <li>Admission Cut-off: JEE-Advanced 2023 - 144</li>
+            <li>Application Deadline: 15 Jan - 21 Aug 2023</li>
+            <li>1st Year Fees: ₹2,09,550</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img
+          src="l5.jpg"
+        />
+        <h1 style="text-align: center;color: #3d484a;">Indian Institute of Management Calcutta - [IIMC]</h1>
+      </div>
+
+      <div class="content">
+        <h2>Indian Institute of Management Calcutta - [IIMC]</h2>
+        <p>
+          <ul>
+            <li>Location: Kolkata, West Bengal</li>
+            <li>Notable for: Leading Business School</li>
+            <li>Admission Cut-off: CAT 2022 - 99</li>
+            <li>Total Fees: ₹31,00,000</li>
+        </ul> Year Fees: ₹2,23,600</li>
+        
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img
+          src="l2.webp"
+        />
+        <h1 style="text-align: center;color: #3d484a;">Indian Institute of Management - [IIMA]</h1>
+      </div>
+
+      <div class="content">
+        <h2>Indian Institute of Management - [IIMA]</h2>
+        <p>
+          <ul>
+            <li>Location: Ahmedabad, Gujarat</li>
+            <li>Notable for: Premier Business School</li>
+            <li>Admission Cut-off: CAT 2022 - 99</li>
+            <li>Total Fees: ₹12,00,000</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgbox">
+        <img
+          src="l5.jpg"
+        />
+        <h1 style="text-align: center;color: #3d484a;">IIM Bangalore - [IIMB]</h1>
+      </div>
+
+      <div class="content">
+        <h2>IIM Bangalore - [IIMB]</h2>
+        <p>
+          <ul>
+            <li>Location: Bangalore, Karnataka</li>
+            <li>Notable for: Top-ranked B-School</li>
+            <li>Admission Cut-off: CAT 2022 - 99</li>
+            <li>Application Deadline: 4 Feb - 12 Feb 2023</li>
+            <li>Total Fees: ₹28,50,000</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </section>
+  <script>document.getElementById("dropdownBtn").addEventListener("click", function() {
+    var dropdownContent = document.getElementById("dropdownContent");
+    var dropdown = document.querySelector(".dropdown");
+    
+    dropdownContent.classList.toggle("active");
+    dropdown.classList.toggle("active");
+});</script>
+  </body>
+</html>

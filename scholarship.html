@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Scholarship</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, charset=UTF-8">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        section{
+            background-color:white;
+    padding: 40px;
+    box-shadow: 0 0 10px black;
+}
+ul{
+    list-style-type: none;
+    text-align:center;
+    
+}
+li{
+    text-align:center;
+    display: inline;
+    text-decoration:none;
+    
+}
+nav{
+        font-size: 25px;
+    }
+    
+li a{
+    text-decoration:none;
+    padding:14px 16px;
+    color:black;
+    
+}
+li:hover{
+    background-color: rgb(4, 32, 87);
+    border-radius: 20px;
+}
+li a:hover{
+    color: white;
+}
+
+   .menu-icon{
+    display:none;
+    cursor: pointer;
+   
+  
+   }
+   @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 30px;
+  color:black;
+  line-height: 15px;
+ float: left;
+ 
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  background-image:linear-gradient(to bottom,#33ccff 0%,#ff99cc 100%);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+.dropbtn {
+            padding: 14px 16px;
+            color:black;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .dropbtn:hover {
+            background-color: rgb(4, 32, 87);
+            border-radius: 20px;
+        }
+
+       
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+       
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+      
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+            text-align: center;
+        }
+
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+       
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .dropdown.active .dropbtn .fa-caret-down {
+            transform: rotate(180deg);
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .register {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(221, 216, 216);
+            padding: 20px;
+            border-top: 1px solid black;
+        }
+        .reg-button {
+            width: 70%;
+            padding: 5px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            color:white;
+            margin-left:150px;
+            background-color: blue;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .row {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        span {
+            color: rgba(249, 235, 47, 0.941);
+        }
+
+        .test {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1,250px);
+            grid-gap: 10px; 
+            justify-content: center;
+            
+        }
+
+        .test-item {
+            border-radius: 20px;
+            color: yellowgreen;
+            background-color:rgb(8, 182, 202);
+            color:white;
+            font-size: 25px;
+            padding: 20px;
+            text-align: center;
+        }
+        .ano{
+            height:200px;
+            background-image:linear-gradient(to right,#c5dae1 0%,white);
+          
+        }
+        .service{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap:10px;
+            text-align: center;
+        }
+
+        li {
+            font-size: 25px;
+            font-weight:40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .b1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px black;
+            font-size: 25px;
+           
+        }
+    
+        .r{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap:20px;
+           text-align: center;
+            
+        }
+        .i{
+            box-shadow: 0 0 10px black;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+.image{
+    border-radius: 50%; 
+            width: 150px; 
+            height: 150px;
+            display: block; 
+    margin: 0 auto;
+}
+h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+       
+#c {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+#closeButton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="number"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        @media screen and (max-width: 880px){
+            .service{
+                grid-template-columns:1fr;
+            }
+            .r{
+                grid-template-columns:1fr;
+            }
+            .test{
+                grid-template-columns:1fr;
+            }
+            .reg-button{
+                margin-left: 25px;
+            }
+            .menu-list{
+    display: none;
+}
+
+.menu-icon{
+    display: block;
+    font-size: 30px;
+    position:absolute;
+   top:20px;
+   right: 10px;
+   
+   
+    
+}
+nav{
+    display: flex;
+flex-direction: column;
+}
+nav li{
+    display: block;
+    padding: 10px 0;
+
+}
+
+ul{
+    text-align: center;
+}
+        }
+   
+    </style>
+</head>
+
+<body>
+    <section class="sec">
+        <div class="waviy">
+            <span style="--i:1;color:black">M</span>
+            <span style="--i:2;color:black">a</span>
+            <span style="--i:3;color:black">j</span>
+            <span style="--i:4;color:black">o</span>
+            <span style="--i:5;color:black">r</span>
+            <span style="--i:6;color:black">M</span>
+            <span style="--i:7;color:black">e</span>
+            <span style="--i:8;color:black">n</span>
+            <span style="--i:9;color:black">t</span>
+            <span style="--i:10;color:black">o</span>
+            <span style="--i:11;color:black">r</span>
+         
+           </div>
+       <nav style="padding-left: 150px;">
+         <ul align="right" class="menu-list">
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="fields.html">Fields</a></li>
+        <li><a href="quizz.html">Quizz</a></li>
+        <li><a href="college.html">Colleges</a></li>
+        <li><a href="scholarship.html">Scholarship</a></li>
+        <li> <div class="dropdown">
+            <a class="dropbtn" id="dropdownBtn">
+                Mentor Hub <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="mentor.html">Mentor search</a>
+                <a href="chat.html">Mentor talk</a>
+                <a href="video.html">Prep clips</a>
+            </div>
+        </div></li>
+        <li><a href="form.html">Enroll</a></li>
+        </ul> 
+        <div class="menu-icon">
+           <i class="fa fa-bars"></i>
+            
+        </div></nav>
+        </section>
+    <h1 class="header" style="font-size: 45px;text-align: center;"><span style="color:rgba(249, 235, 47, 0.941);">Scholarship</span> 2024</h1>
+    <p style="font-size: 20px;color:gray;text-align: center;">Applicable for <b>BBA,BCA,B.TECH,MBA & MCA</b> in Majormentor partner colleges</p>
+<div class="b1">
+
+    <div>
+    <h1 style="text-align: center;font-weight: bolder;">Why us?</h1><hr style="height:5px;width: 100%;color:white">
+    <img src="degree.jpg" style="width:100%;" ><br></div>
+   <div>
+  <p><marquee direction="up" scrollamount="7">
+
+"Welcome to Majormentor, your doorway to educational opportunities and brighter horizons. Our mission is simple yet profound: to turn your academic aspirations into reality. With a range of scholarships tailored to various academic journeys and backgrounds, we're here to support you, whether you're a recent high school graduate or a working professional.
+
+Our user-friendly platform provides quick access to scholarship details, including eligibility criteria and application deadlines. We firmly believe that education should be within reach for everyone, free from financial constraints. Begin your journey towards a brighter future today by exploring our scholarships. Let us be your partner in pursuing academic excellence."</marquee> </p></div></div>
+<br>
+<br>
+<br>
+<br>
+<h1>Success Stories</h1>
+
+<div class="r">
+    <div class="i"><img src="sc1.webp" class="image"><p><h1>Naveenkumar Manimaran</h1><br>
+        "I have received A-Z assistance from Leverage Edu and because of them, today I have 2 admits in hand. They have separate teams to handle everything who are super competent."</p></div>
+    <div class="i"><img src="sc2.jpg" class="image"><p><h1>Harish</h1><br>
+        "The service was very good, my coach helped me alot. She always replied on time. They are very quick and responsive.
+        </p></div>
+    <div class="i"><img src="sc3.jpeg" class="image"><p><h1>Suvarna Rathna Kumari Kotha</h1><br>
+        "The process was made really efficient and easy by my coach. There were no hiccups. Even during the visa stage, they helped me with mock interviews which gave me more confidence going into my visa interview."
+        
+        </p></div>
+
+    
+</div>
+    
+    <h1 class="q" style="font-size: 30px;">Secure your future</h1>
+    <div class="test">
+        <div class="test-item"><h1>Time|questions</h1><span style="color:yellow">45 Minutes<br>
+        50 Questions</span></div>
+        <div class="test-item"><h1>Test Language</h1><span style="color:yellow">
+            English</span></div>
+        <div class="test-item"><h1>Eligiblity</h1><span style="color:yellow">Class 12th undergraduate
+            </span></div>
+        <div class="test-item"><h1>Mode Of Test</h1><span style="color:yellow">Online(desktop only)<br>offline</span></div>
+    </div>
+    <h1 style="font-family:cursive; background-image:linear-gradient(to right,#c5dae1 0%,white);">How to <span style="color:rgb(8, 182, 202);;">apply</span></h1>
+    <ul class="ano">
+        <li>Fill registration form</li>
+        <li>Pay registration fee & submit form for review</li>
+        <li>Book slot for Majormentor scholarship test(online/offline)</li>
+    </ul>
+    <h3 style="font-size: 40px;color: rgb(163, 158, 158);">50+ TOP COLLEGES</h3>
+    <h1><span>Our Partner</span> Colleges</h1>
+
+    <div class="container">
+        <div class="row">
+            <marquee direction="left" scrollamount="7">
+              
+                <div class="box">
+                    <img src="l1.jpeg" alt="photo">
+                </div>
+                <div class="box">
+                    <img src="l2.webp" alt="photo">
+                </div>
+                <div class="box">
+                    <img src="l4.jpg" alt="photo">
+                </div>
+                <div class="box">
+                    <img src="l5.jpg" alt="photo">
+                </div>
+               
+                <div class="box">
+                    <img src="l1.jpeg" alt="photo">
+                </div>
+                <div class="box">
+                    <img src="l2.webp" alt="photo">
+                </div>
+                <div class="box">
+                    <img src="l4.jpg" alt="photo">
+                </div>
+                <div class="box">
+                    <img src="l5.jpg" alt="photo">
+                </div>
+            </marquee></div></div>
+            <div class="container">
+                <div class="row">
+                    <marquee direction="right" scrollamount="7">
+                      
+                        <div class="box">
+                            <img src="l8.jpg" alt="photo">
+                        </div>
+                        <div class="box">
+                            <img src="l5.jpg" alt="photo">
+                        </div>
+                        <div class="box">
+                            <img src="l4.jpg" alt="photo">
+                        </div>
+                        <div class="box">
+                            <img src="l5.jpg" alt="photo">
+                        </div>
+                       
+                        <div class="box">
+                            <img src="l1.jpeg" alt="photo">
+                        </div>
+                        <div class="box">
+                            <img src="l8.jpg" alt="photo">
+                        </div>
+                        <div class="box">
+                            <img src="l4.jpg" alt="photo">
+                        </div>
+                        <div class="box">
+                            <img src="l5.jpg" alt="photo">
+                        </div>
+                    </marquee>
+        </div></div>
+        <div id="overlay"></div>
+        <h1 class="abroad" style="text-align: center;font-family:cursive;color:rgb(60, 170, 249);font-size: 30px;text-shadow: 0 0 5px black;">Want to Study and Work abroad?</h1>
+    <p style="font-size: 20px;background-color: #e3e3e49a;">With a proven process and methodology, Majormentor has been helping students pursue higher education abroad since 1999. We offer students complete overseas education support. Our ethical counseling process, highly experienced team and comprehensive suite of student services ensure you make the right decision to advance yourself.
+<br>
+
+       <span style="font-family: fantasy;color: rgb(232, 246, 40);font-size: 22px;text-shadow: 0 0 5px black"> Counseling:</span><br>
+        Discover the perfect course and college for you based on the strength of your profile, your preferences and the country’s economy.<br>
+        
+        
+        <span style="font-family: fantasy;color: rgb(232, 246, 40);font-size: 22px;text-shadow: 0 0 5px black"> IELTS Coaching:</span><br>
+        Improve your chances of getting into your college of choice with our success-oriented IELTS coaching.<br>
+        
+        
+        <span style="font-family: fantasy;color: rgb(232, 246, 40);font-size: 22px;text-shadow: 0 0 5px black;"> University selection:</span><br>
+        Our counselors will help you idenify the best university to apply based on your interests & profile.<br>
+
+
+        <span style="font-family: fantasy;color: rgb(232, 246, 40);font-size: 22px;text-shadow: 0 0 5px black;"> Personal statements:</span><br>
+        Your Statement of Purpose and Letters of Recommendation are compiled by professionals in line with your subject of interest.<br>
+        
+        
+        <span style="font-family: fantasy;color:rgb(232, 246, 40);font-size: 22px;text-shadow: 0 0 5px black;">  Review:</span><br>
+        Be 100% sure. We get your Essay reviewed by Admissions Advisors to ensure you have got everything right.<br>
+        
+        
+        <span style="font-family: fantasy;color: rgb(232, 246, 40);font-size: 22px;text-shadow: 0 0 5px black;">  Application assistance:</span><br>
+        Don't leave your admission to chance! Our experienced counselors will help you with your university applications.<br>
+        <span style="font-family: fantasy;color: rgb(232, 246, 40);font-size: 22px;text-shadow: 0 0 5px black;">  Visa advisor:</span><br>
+Avoid the rush. Start working on your finances and proof of funds early. Our dedicated Visa advisor will guide you from the moment you enroll with us.<br>
+
+        
+        </p>
+        <h1 style="text-align: center;">Our Services</h1>
+        <div class="service">
+            <div style="background-color:rgb(8, 182, 202);color:white"><i class="fa fa-umbrella" style="color:white;font-size: 70px;"></i><br><h1>Studies financing</h1><br>"Our Studies Financing service offers tailored financial solutions to help you achieve your educational goals, providing assistance in securing funding for tuition, books, and other academic expenses."</div>
+            <div style="background-color:rgb(250, 250, 62);color:white"><i class="fa fa-globe" style="font-size: 70px;"></i><h1>Savings and investimg</h1>"Our Savings and Investing service empowers you to make informed financial decisions, whether you're looking to build a nest egg for the future, plan for retirement, or grow your wealth through strategic investments."</div>
+            <div style="background-color:rgb(8, 182, 202);color:white"><i class="fa fa-money" style="font-size: 70px;"></i><h1>Insurance</h1>"Our Insurance service provides peace of mind by offering a range of coverage options to safeguard you and your loved ones from unexpected events, ensuring financial protection and security in times of need."</div>
+            <div style="background-color:rgb(250, 250, 62);color:white"><i class="fa fa-flag" style="font-size: 70px;"></i><h1>Career Counselling</h1>"Our Career Counseling service offers expert guidance and personalized advice to help you make informed decisions about your educational and professional journey, ensuring that you choose the path that aligns with your goals and aspirations."</div>
+        </div>
+        <br>
+        <br>
+        <br><br>
+        <br>
+        <br>
+        <br><br>
+        <div class="register" style="background-color: #ccc;">
+            <button type="submit" class="reg-button">Register</button>
+            
+        </div>
+        
+        
+    
+    <div id="c" >
+        
+        <h1>Scholarship Application Form</h1>
+        <form action="process.php" method="POST" style="margin-right:10px;">
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="birthdate">Date of Birth:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <label for="university">University/College:</label>
+            <input type="text" id="university" name="university" required>
+
+            <label for="major">Major/Field of Study:</label>
+            <input type="text" id="major" name="major" required>
+
+            <label for="gpa">GPA:</label>
+            <input type="number" id="gpa" name="gpa" step="0.01" required>
+
+            <label for="transcript">Transcript (PDF):</label>
+            <input type="file" id="transcript" name="transcript" accept=".pdf" required>
+
+           
+            
+
+            <input type="submit" value="Submit">
+        <p id="closeButton" style="float: right;">&times;</p><br><br>
+        </form>
+    </div>
+
+       <script>
+        var loginButton = document.querySelector(".reg-button");
+        var modal = document.getElementById("c");
+        var overlay = document.getElementById("overlay");
+
+loginButton.addEventListener('click', function () {
+    
+    modal.style.display = "block";
+    overlay.style.display = "block"; 
+});
+
+
+var closeBtn = document.getElementById("closeButton");
+
+closeBtn.addEventListener('click', function () {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+});
+
+window.addEventListener('click', function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+    }
+});
+document.getElementById("dropdownBtn").addEventListener("click", function() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            var dropdown = document.querySelector(".dropdown");
+            
+            dropdownContent.classList.toggle("active");
+            dropdown.classList.toggle("active");
+        });
+        const menu=document.querySelector('.menu-icon');
+        const menulist=document.querySelector('nav ul');
+        menu.addEventListener('click',()=>{
+        menulist.classList.toggle('menu-list')});
+
+       </script>
+</body>
+
+</html>

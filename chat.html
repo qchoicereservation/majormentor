@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chat App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        
+    
+         *{
+        padding:0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+        section{
+            background-color: rgb(8, 182, 202);
+    padding: 40px;
+    box-shadow: 0 0 10px black;
+}
+ul{
+    list-style-type: none;
+    text-align:center;
+    
+}
+li{
+    text-align:center;
+    display: inline;
+    text-decoration:none;
+    
+}
+nav{
+        font-size: 25px;
+    }
+    
+li a{
+    text-decoration:none;
+    padding:14px 16px;
+    color:white;
+    
+}
+li:hover{
+    background-color: rgb(4, 32, 87);
+    border-radius: 20px;
+}
+
+
+   .menu-icon{
+    display:none;
+    cursor: pointer;
+   
+  
+   }
+   @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 30px;
+  color:black;
+  line-height: 15px;
+ float: left;
+ 
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  background-image:linear-gradient(to bottom,#33ccff 0%,#ff99cc 100%);
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+
+.dropbtn {
+            padding: 14px 16px;
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+        }
+
+        .dropbtn:hover {
+            background-color: rgb(4, 32, 87);
+            border-radius: 20px;
+        }
+
+       
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+       
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+      
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: #333;
+            text-align: center;
+        }
+
+        
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+       
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .dropdown.active .dropbtn .fa-caret-down {
+            transform: rotate(180deg);
+        }
+        .chat-input {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(221, 216, 216);
+            padding: 10px;
+            border-top: 1px solid black;
+        }
+        .chat-input input {
+            width: 80%;
+            padding: 5px;
+            border: none;
+            outline: none;
+        }
+       
+        .chatting{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 50px;
+            justify-content: center;
+            background-color: white;
+        }
+        .i1 {
+            background-image: url('w2.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            box-shadow: none;
+        }
+        .i2{
+            display: flex;
+            justify-content: flex-end;
+            background-color: white;
+            box-shadow: none;
+        }
+        table {
+            width: 100%;
+        
+        }
+        table tr td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            color:black;
+            font-weight: bolder;
+            
+        }
+        .chat-container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        }
+        .chat-messages {
+            max-height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .chat-input button {
+            background-color: #2978cd;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        @media screen and(max-width:480px){
+            .menu-list{
+    display: none;
+}
+
+.menu-icon{
+    display: block;
+    font-size: 30px;
+    position:absolute;
+   top:20px;
+   right: 10px;
+   
+   
+    
+}
+nav{
+    display: flex;
+flex-direction: column;
+}
+nav li{
+    display: block;
+    padding: 10px 0;
+
+}
+
+ul{
+    text-align: center;
+}
+        }
+       
+    </style>
+</head>
+<body>
+    <section>
+        <div class="waviy">
+            <span style="--i:1">M</span>
+            <span style="--i:2">a</span>
+            <span style="--i:3">j</span>
+            <span style="--i:4">o</span>
+            <span style="--i:5">r</span>
+            <span style="--i:6">M</span>
+            <span style="--i:7">e</span>
+            <span style="--i:8">n</span>
+            <span style="--i:9">t</span>
+            <span style="--i:10">o</span>
+            <span style="--i:11">r</span>
+         
+           </div>
+       <nav style="padding-left: 150px;">
+         <ul align="right" class="menu-list">
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="fields.html">Fields</a></li>
+        <li><a href="quizz.html">Quizz</a></li>
+        <li><a href="college.html">Colleges</a></li>
+        <li><a href="scholarship.html">Scholarship</a></li>
+        <li> <div class="dropdown">
+            <a class="dropbtn" id="dropdownBtn">
+                Mentor Hub <i class="fas fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content" id="dropdownContent">
+                <a href="mentor.html">Mentor search</a>
+                <a href="chat.html">Mentor talk</a>
+                <a href="video.html">Prep clips</a>
+            </div>
+        </div></li>
+        <li><a href="form.html">Enroll</a></li>
+        </ul> 
+        <div class="menu-icon">
+           <i class="fa fa-bars"></i>
+            
+        </div></nav>
+        </section>
+    <section class="chatting">
+        <section class="i1">
+          
+            <table>
+                <tr>
+                    <td style="color: red;font-size: 30px; font-weight: bolder;">10 Smart Questions To Ask A Mentor</td>
+                </tr>
+                <tr>
+                    <td>1. If you were where I am now, what steps would you take to jump-start your career?</td>
+                </tr>
+                <tr>
+                    <td>2. Which professional organizations do you recommend I join?</td>
+                </tr>
+                <tr>
+                    <td>3. What are some things that you regret not doing earlier in your career?</td>
+                </tr>
+                <tr>
+                    <td>4. What was a career-defining moment for you?</td>
+                </tr>
+                <tr>
+                    <td>5. Do you have any tips on how can I improve my resume?</td>
+                </tr>
+                <tr>
+                    <td>6. What hard choices did you have to make to get where you are now?</td>
+                </tr>
+                <tr>
+                    <td>7. How can I set and prioritize meaningful career goals?</td>
+                </tr>
+                <tr>
+                    <td>8. Can you provide guidance on networking and building professional relationships?</td>
+                </tr>
+                <tr>
+                    <td>9. What strategies do you use for continuous learning and professional development?</td>
+                </tr>
+                <tr>
+                    <td>10. How do you handle difficult decisions or conflicts in the workplace?</td>
+                </tr>
+               
+                
+                
+            </table>
+        </section>
+        <section class="i2">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h1 style="text-align: center;background-color: #2978cd;font-size: 30px;color: white;">Chat Room</h1>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Chat messages will be displayed here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Ask your question...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        const messageInput = document.getElementById("messageInput");
+        const chatMessages = document.getElementById("chatMessages");
+
+        function sendMessage() {
+            const message = messageInput.value;
+            if (message) {
+                displayMessage("You: " + message);
+                messageInput.value = "";
+
+                // Simulate a reply from the server (mentor) after a delay
+                setTimeout(() => {
+                    displayMessage("Mentor: Hello, " + message + "!");
+                    setTimeout(() => {
+                        displayMessage("Mentor: I can help you with that. Could you please specify the type of courses you are interested in? It will help me provide more relevant information.");
+                    }, 1000); // Add a delay between mentor messages
+                }, 1000);
+            }
+        }
+
+        function displayMessage(message) {
+            const messageElement = document.createElement("div");
+            messageElement.className = "message";
+            messageElement.textContent = message;
+            chatMessages.appendChild(messageElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+       
+        setTimeout(() => {
+            displayMessage("Mentor: Hi there!");
+            setTimeout(() => {
+                displayMessage("Mentor: How can I help you?");
+                setTimeout(() => {
+                    displayMessage("Mentor: Your name?");
+                    setTimeout(() => {
+                        displayMessage("Mentor: Course you are interested in?");
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 2000);
+        document.getElementById("dropdownBtn").addEventListener("click", function() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            var dropdown = document.querySelector(".dropdown");
+            
+            dropdownContent.classList.toggle("active");
+            dropdown.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
